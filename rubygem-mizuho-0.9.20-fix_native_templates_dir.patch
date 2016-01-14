@@ -1,0 +1,17 @@
+diff --git a/lib/mizuho.rb b/lib/mizuho.rb
+index eaa3ffe..e7ff12b 100644
+--- a/lib/mizuho.rb
++++ b/lib/mizuho.rb
+@@ -23,9 +23,9 @@ module Mizuho
+ 	NATIVELY_PACKAGED = true
+ 
+ 	if NATIVELY_PACKAGED
+-		TEMPLATES_DIR    = "/usr/share/mizuho/templates"
+-		if File.exist?("/usr/share/mizuho/asciidoc")
+-			ASCIIDOC = ["/usr/bin/python", "/usr/share/mizuho/asciidoc/asciidoc.py"]
++		TEMPLATES_DIR    = "/opt/rh/rh-passenger40/root/usr/share/gems/gems/mizuho-%s/templates" % (VERSION_STRING)
++		if File.exist?("/opt/rh/rh-passenger40/root/usr/share/gems/gems/mizuho-0.9.20/asciidoc/asciidoc.py")
++			ASCIIDOC = ["/usr/bin/python", "/opt/rh/rh-passenger40/root/usr/share/gems/gems/mizuho-0.9.20/asciidoc/asciidoc.py"]
+ 		else
+ 			ASCIIDOC = "/usr/bin/asciidoc"
+ 		end
